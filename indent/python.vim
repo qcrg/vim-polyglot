@@ -456,3 +456,7 @@ function! GetPythonPEPIndent(lnum)
 
     return s:indent_like_previous_line(a:lnum)
 endfunction
+
+set sw=2
+set softtabstop=2
+set expandtab

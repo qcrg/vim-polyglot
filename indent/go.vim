@@ -87,4 +87,7 @@ endfunction
 let &cpo = s:cpo_save
 unlet s:cpo_save
 
+set sw=2
+set softtabstop=2
+set expandtab
 " vim: sw=2 ts=2 et
