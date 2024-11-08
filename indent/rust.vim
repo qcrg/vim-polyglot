@@ -287,4 +287,7 @@ let &cpo = s:save_cpo
 unlet s:save_cpo
 " vint: +ProhibitAbbreviationOption
 
+set sw=2
+set softtabstop=2
+set expandtab
 " vim: set et sw=4 sts=4 ts=8:
