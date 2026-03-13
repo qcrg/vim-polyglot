@@ -289,5 +289,5 @@ unlet s:save_cpo
 
 set sw=2
 set softtabstop=2
-set expandtab
+set tabstop=2
 " vim: set et sw=4 sts=4 ts=8:
