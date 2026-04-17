@@ -2879,26 +2879,9 @@ if !has_key(g:polyglot_is_disabled, 'autoindent')
       endif
     endfor
 
-    if spaces_minus_tabs < 0
-      setlocal noexpandtab
-      let &l:shiftwidth=&tabstop
-      return 1
-    endif
-
-    let shiftwidth = s:get_shiftwidth(indents)
-
-    if shiftwidth > 0
-      setlocal expandtab
-      let &l:shiftwidth=shiftwidth
-      try
-        " Sunchronize tabstop with shiftwidth
-        let &l:softtabstop = -1
-      catch /^Vim\%((\a\+)\)\=:E487/
-        " -1 was not supported before Vim 7.4
-        let &l:softtabstop = a:num_spaces
-      endtry
-      return 1
-    endif
+    setlocal noexpandtab
+    let &l:shiftwidth=&tabstop
+    return 1
 
     return 0
   endfunc
